@@ -1,0 +1,94 @@
+html
+{
+    font-size: 13px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+.main
+{
+    display: grid;
+    grid-template-rows: 60px 220px 100px 150px 100px 1fr;
+    grid-template-columns: 1fr 100px 250px 300px 230px 70px 1fr;
+    grid-template-areas: 'a x b b b z c'
+        'a x d d e z c'
+        'a x g g g z c'
+        'a x h h h z c'
+        'a x i k m z c'
+        'a x j l n z c';
+}
+
+.topLeft
+{
+    grid-area: a;
+}
+
+.topMid
+{
+    grid-area: b;
+}
+
+.topRight
+{
+    grid-area: c;
+}
+
+.news
+{
+    grid-area: d;
+}
+
+.addSmall
+{
+    grid-area: e;
+}
+
+.yandex
+{
+    grid-area: f;
+}
+
+.search
+{
+    grid-area: g;
+}
+
+.add
+{
+    grid-area: h;
+}
+
+.weather
+{
+    grid-area: i;
+}
+
+.visited
+{
+    grid-area: j;
+}
+
+.traffic
+{
+    grid-area: k;
+}
+
+.tv
+{
+    overflow: scroll;
+    grid-area: l;
+}
+
+.map
+{
+    grid-area: m;
+}
+
+.poster
+{
+    grid-area: n;
+}
