@@ -12,19 +12,27 @@ body
 .main
 {
     display: grid;
-    grid-template-rows: 60px 220px 100px 150px 100px 1fr;
-    grid-template-columns: 1fr 100px 250px 300px 230px 70px 1fr;
+    grid-template-rows: 60px 220px 110px 108px auto 250px;
+    grid-template-columns: 150px 160px 300px 300px 300px 70px 160px;
     grid-template-areas: 'a x b b b z c'
         'a x d d e z c'
         'a x g g g z c'
         'a x h h h z c'
-        'a x i k m z c'
-        'a x j l n z c';
+        'a x i l k z c'
+        'a x i l k z c';
 }
 
 .topLeft
 {
+    margin: 16px;
     grid-area: a;
+    color: gray;
+}
+
+.topLeft .location:hover
+{
+    cursor: pointer;
+    color: #c00;
 }
 
 .topMid
@@ -32,9 +40,56 @@ body
     grid-area: b;
 }
 
+.topSettings
+{
+    padding-top: 16px;
+    grid-area: z;
+}
+
+.topSettings p:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
 .topRight
 {
+    display: flex;
+    flex-direction: row-reverse;
     grid-area: c;
+}
+
+.profile
+{
+    margin: 16px;
+    padding-left: 18px;
+    width: 173px;
+    height: 84px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgb(190, 190, 190);
+}
+
+.profile > p:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.profile-name
+{
+    
+    font-weight: 700;
+}
+
+.profile-name > a
+{
+    color: #c00;
+}
+
+.profile p > span
+{
+    font-weight: 700;
+    margin-left: 4px;
 }
 
 .news
@@ -42,53 +97,598 @@ body
     grid-area: d;
 }
 
+.news-header
+{
+    font-size: 18px;
+}
+
+.news-header > a:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.nh-one
+{
+    margin-right: 12px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #0054b9;
+}
+
+.nh-two
+{
+    margin-right: 12px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #6da2e1;
+}
+
+.nh-three
+{
+    margin-bottom: 10px;
+    color: grey;
+    font-size: 13px;
+}
+
+.news-main
+{
+    display: block;
+}
+
+.news-list > p:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.news-list > p::before
+{
+    content: '•';
+    margin-left: 6px;
+    margin-right: 6px;
+    color: black;
+}
+
+.news-footer
+{
+    display: flex;
+    margin-right: 10px;
+}
+
+.news-footer > div
+{
+    margin-right: 18px;
+}
+
+.news-footer > div > .money-name
+{
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+.news-footer > div > .money-name:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.news-footer > div > .money-delta
+{
+    margin: -2px -2px -2px 7px;
+    padding: 3px 0;
+    text-align: right;
+    color: #999;
+}
+
 .addSmall
 {
     grid-area: e;
+    position: relative;
+    padding: 8px 4px 4px 20px;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addSmall .as-main
+{
+    margin-top: 11px;
+    font-size: 18px;
+    color: #0054b9;
+}
+
+.addSmall .as-where
+{
+    margin-top: 10px;
+}
+
+.addSmall img
+{
+    width: 120px;
+    height: 94px;
+}
+
+.addSmall .as-main:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.addSmall img:hover
+{
+    cursor: pointer;
 }
 
 .yandex
 {
-    grid-area: f;
+    grid-area: x;
+}
+
+.yandex-logo
+{
+    margin-top: 291px;
+    width: 140px;
+    height: auto;
 }
 
 .search
 {
+    display: flex;
+    flex-direction: column;
     grid-area: g;
+}
+
+.search-header
+{
+    margin-bottom: 10px;
+    margin-top: 9px;
+}
+
+.search-header > a
+{
+    color: #0054b9;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.search-header > a:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.search-string
+{
+    width: 880px;
+}
+
+.search-main
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 36px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 219, 77);
+    width: 816px;
+}
+
+.search-main .search-main-input
+{
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    float: left;
+    width: 816px;
+    height: 30px;
+    font-size: 123%;
+}
+
+.search-button
+{
+    height: 36px;
+    width: 80px;
+    background: rgb(255, 219, 77);
+    line-height: 36px;
+    text-align: center;
+    font-size: 120%;
+}
+
+.search-button:hover
+{
+    cursor: pointer;
+}
+
+/* .search-button::after
+{
+    top: -4px;
+    right: -9px;
+    border-width: 22px 0 22px 11px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    border-style: solid;
+    border-color: rgba(255,219,76,0);
+    border-left-color: inherit;
+} */
+
+.search-footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px;
+    width: 816px;
+}
+
+.sf-one > span
+{
+    color: grey;
+}
+
+.sf-one > span:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.sf-two > img
+{
+    cursor: pointer;
+    width: 31px;
+    height: 18px;
+    margin-top: -4px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.sf-two > span:hover
+{
+    cursor: pointer;
+    color: #c00;
 }
 
 .add
 {
+    cursor: pointer;
     grid-area: h;
+    margin-bottom: 18px;
+}
+
+.info-one
+{
+    padding-right: 6px;
+    grid-area: i;
 }
 
 .weather
 {
-    grid-area: i;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 8px 4px 4px;
+    margin-top: 6px;
+    line-height: 1.25;
+}
+
+.weather h3
+{
+    margin-right: 8px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.weather h3 > a
+{
+    color: #0054b9;
+}
+
+.weather h3 > a:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.weather > span:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.weather h3 > img
+{
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    margin: -15px 7px -10px;
 }
 
 .visited
 {
-    grid-area: j;
+    line-height: 1.25;
+    position: relative;
+    padding: 8px 4px 4px;
+    margin-top: 6px;
 }
 
-.traffic
+.visited h3
 {
-    grid-area: k;
+    color: #0054b9;
+    margin-top: 4px;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.visited h3:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.visited .visited-place
+{
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.visited .visited-place:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.visited .visited-comment:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.info-two
+{
+    padding-right: 6px;
+    grid-area: l;
 }
 
 .tv
 {
+    line-height: 1.25;
+    position: relative;
+    padding: 8px 4px 4px 10px;
+    margin-top: 6px;
+}
+
+.tv h3
+{
+    color: #0054b9;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.tv h3 > img
+{
+    vertical-align: middle;
+    width: 92px;
+    height: 24px;
+    margin-left: 10px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+}
+
+.tv-main > p
+{
+    margin-bottom: 10px;
+}
+
+.tv-main > p:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.tv-main .tv-time
+{
+    color: black;
+    margin-right: 8px;
+}
+
+.tv-main .channel
+{
+    margin-left: 8px;
+    color: grey;
+}
+
+.tv-main .channel:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.cars
+{
+    line-height: 1.25;
+    position: relative;
+    padding: 8px 4px 4px 10px;
+    margin-top: 6px;
+
+}
+
+.cars h3
+{
+    margin-right: 8px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #0054b9;
+}
+
+.cars-main
+{
+    height: 250px;
     overflow: scroll;
-    grid-area: l;
+}
+
+.cars-main > p:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.cars-main .time
+{
+    margin-left: 8px;
+    color: grey;
+}
+
+.cars-main .time:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.info-three
+{
+    padding-right: 6px;
+    grid-area: k;
+}
+
+.traffic
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 8px 4px 4px 20px;
+    margin-top: 6px;
+    line-height: 1.25;
+}
+
+.traffic h3
+{
+    margin-right: 8px;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.traffic h3 > a
+{
+    color: #0054b9;
+}
+
+.traffic h3 > a:hover
+{
+    color: #c00;
+}
+
+.traffic h3 > img
+{
+    cursor: pointer;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: -10px 2px -10px 3px;
+}
+
+.traffic span:hover
+{
+    cursor: pointer;
+    color: #c00;
 }
 
 .map
 {
-    grid-area: m;
+    line-height: 1.25;
+    position: relative;
+    padding: 8px 4px 4px 20px;
+    margin-top: 6px;
+}
+
+.map h3
+{
+    color: #0054b9;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding-right: 23px;
+}
+
+.map-transp > span
+{
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-right: 1em;
+}
+
+.map-transp > span:hover
+{
+    cursor: pointer;
+    color: #c00;
 }
 
 .poster
 {
-    grid-area: n;
+    line-height: 1.25;
+    position: relative;
+    padding: 8px 4px 4px 20px;
+    margin-top: 6px;
+}
+
+.poster h3
+{
+    color: #0054b9;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.poster-main > p
+{
+    margin-bottom: 10px;
+}
+
+.poster-main > p:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.poster-main .desc
+{
+    margin-left: 8px;
+    color: grey;
+}
+
+.poster-main .desc:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.poster-main p:last-child
+{
+    font-weight: 700;
+}
+
+h3:hover
+{
+    color: #c00;
+    cursor: pointer;
 }
