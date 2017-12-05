@@ -9,6 +9,11 @@ body
     margin: 0 auto;
 }
 
+a
+{
+    text-decoration: none;
+}
+
 .main
 {
     display: grid;
@@ -22,11 +27,20 @@ body
         'a x i l k z c';
 }
 
+.location .location-icon
+{
+    display: block;
+    float: left;
+    width: 19px;
+    height: 19px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg width="19" height="38" viewBox="0 0 19 38" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"%3E%3Cdefs%3E%3Cg id="a"%3E%3Cpath d="m15 4l-11.9 5.3 5.8 0.8 0.5 5.5 5.6-11.6z"/%3E%3C/g%3E%3C/defs%3E%3Cuse xmlns="http://www.w3.org/2000/svg" xlink:href="%23a" fill="%23B3B3B3"/%3E%3Cuse xmlns="http://www.w3.org/2000/svg" xlink:href="%23a" fill="%23d00" transform="translate(0 19)"/%3E%3C/svg%3E');
+}
+
 .topLeft
 {
     margin: 16px;
     grid-area: a;
-    color: gray;
+    color: #d3d3d3;
 }
 
 .topLeft .location:hover
@@ -110,18 +124,14 @@ body
 
 .nh-one
 {
-    margin-right: 12px;
-    margin-top: 4px;
-    margin-bottom: 10px;
+    margin: 4px 12px 10px 0;
     font-weight: 400;
     color: #0054b9;
 }
 
 .nh-two
 {
-    margin-right: 12px;
-    margin-top: 4px;
-    margin-bottom: 10px;
+    margin: 4px 12px 10px 0;
     font-weight: 400;
     color: #6da2e1;
 }
@@ -129,7 +139,7 @@ body
 .nh-three
 {
     margin-bottom: 10px;
-    color: grey;
+    color: #d3d3d3;
     font-size: 13px;
 }
 
@@ -147,8 +157,7 @@ body
 .news-list > p::before
 {
     content: '•';
-    margin-left: 6px;
-    margin-right: 6px;
+    margin: 0 6px;
     color: black;
 }
 
@@ -244,8 +253,7 @@ body
 
 .search-header
 {
-    margin-bottom: 10px;
-    margin-top: 9px;
+    margin: 9px 0 10px;
 }
 
 .search-header > a
@@ -263,6 +271,7 @@ body
 
 .search-string
 {
+    display: flex;
     width: 880px;
 }
 
@@ -299,24 +308,18 @@ body
     font-size: 120%;
 }
 
+.sword
+{
+    border: 10px solid transparent;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left-color: rgb(255, 219, 77);
+}
+
 .search-button:hover
 {
     cursor: pointer;
 }
-
-/* .search-button::after
-{
-    top: -4px;
-    right: -9px;
-    border-width: 22px 0 22px 11px;
-    position: absolute;
-    width: 0;
-    height: 0;
-    content: '';
-    border-style: solid;
-    border-color: rgba(255,219,76,0);
-    border-left-color: inherit;
-} */
 
 .search-footer
 {
@@ -329,7 +332,7 @@ body
 
 .sf-one > span
 {
-    color: grey;
+    color: #d3d3d3;
 }
 
 .sf-one > span:hover
@@ -372,19 +375,17 @@ body
     display: flex;
     flex-direction: column;
     position: relative;
-    padding: 8px 4px 4px;
+    padding: 8px 4px 4px 20px;
     margin-top: 6px;
     line-height: 1.25;
 }
 
 .weather h3
 {
-    margin-right: 8px;
+    margin: 4px 8px 10px 0;
     display: inline-block;
-    margin-top: 4px;
     font-size: 138.5%;
     font-weight: 400;
-    margin-bottom: 10px;
 }
 
 .weather h3 > a
@@ -453,6 +454,40 @@ body
     color: #c00;
 }
 
+.joke
+{
+    line-height: 1.25;
+    position: relative;
+    padding: 8px 4px 4px;
+    margin-top: 6px;
+}
+
+.joke h3
+{
+    color: #0054b9;
+    margin-top: 4px;
+    font-size: 138.5%;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.joke h3:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
+.joke .joke-group
+{
+    color: #0054b9;
+}
+
+.joke .joke-group:hover
+{
+    cursor: pointer;
+    color: #c00;
+}
+
 .info-two
 {
     padding-right: 6px;
@@ -472,8 +507,7 @@ body
     color: #0054b9;
     font-size: 138.5%;
     font-weight: 400;
-    margin-top: 4px;
-    margin-bottom: 10px;
+    margin: 4px 0 10px;
 }
 
 .tv h3 > img
@@ -481,9 +515,7 @@ body
     vertical-align: middle;
     width: 92px;
     height: 24px;
-    margin-left: 10px;
-    margin-top: -3px;
-    margin-bottom: -3px;
+    margin: -3px 0 -3px 10px;
 }
 
 .tv-main > p
@@ -506,7 +538,7 @@ body
 .tv-main .channel
 {
     margin-left: 8px;
-    color: grey;
+    color: #d3d3d3;
 }
 
 .tv-main .channel:hover
@@ -526,12 +558,10 @@ body
 
 .cars h3
 {
-    margin-right: 8px;
+    margin: 4px 8px 10px 0;
     display: inline-block;
-    margin-top: 4px;
     font-size: 138.5%;
     font-weight: 400;
-    margin-bottom: 10px;
     color: #0054b9;
 }
 
@@ -539,6 +569,7 @@ body
 {
     height: 250px;
     overflow: scroll;
+    box-shadow: 0 -30px 18px -39px #888 inset, 0 30px 18px -39px #888 inset;
 }
 
 .cars-main > p:hover
@@ -550,7 +581,7 @@ body
 .cars-main .time
 {
     margin-left: 8px;
-    color: grey;
+    color: #d3d3d3;
 }
 
 .cars-main .time:hover
@@ -577,12 +608,10 @@ body
 
 .traffic h3
 {
-    margin-right: 8px;
+    margin: 4px 8px 10px 0;
     display: inline-block;
-    margin-top: 4px;
     font-size: 138.5%;
     font-weight: 400;
-    margin-bottom: 10px;
 }
 
 .traffic h3 > a
@@ -620,12 +649,10 @@ body
 
 .map h3
 {
+    margin: 4px 23px 10px 0;
     color: #0054b9;
     font-size: 138.5%;
     font-weight: 400;
-    margin-top: 4px;
-    margin-bottom: 10px;
-    padding-right: 23px;
 }
 
 .map-transp > span
@@ -655,6 +682,7 @@ body
     color: #0054b9;
     font-size: 138.5%;
     font-weight: 400;
+    margin: 4px 0 10px;
     margin-top: 4px;
     margin-bottom: 10px;
 }
@@ -673,7 +701,7 @@ body
 .poster-main .desc
 {
     margin-left: 8px;
-    color: grey;
+    color: #d3d3d3;
 }
 
 .poster-main .desc:hover

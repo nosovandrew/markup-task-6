@@ -8,23 +8,22 @@
 <body>
     <main class="main">
         <div class="topLeft">
-            <span class="location">Екатерибург</span>
+            <div class="location"><div class="location-icon"></div>Екатерибург</div>
         </div>
-        <div class="topMid">
-        </div>
+        <div class="topMid"></div>
         <div class="topSettings">
             <p>Настройка</p>
         </div>
         <div class="topRight">
             <div class="profile">
-                <p class="profile-name"><a>a</a>ndrewnosov</p>
+                <p class="profile-name"><a href="#">a</a>ndrewnosov</p>
                 <p>Почта <span>222</span></p>
             </div>
         </div>
         <div class="news">
             <div class="news-header">
-                <a class="nh-one">Сейчас в СМИ</a>
-                <a class="nh-two">в Екатеринбурге</a>
+                <a href="#" class="nh-one">Сейчас в СМИ</a>
+                <a href="#" class="nh-two">в Екатеринбурге</a>
                 <span class="nh-three">21 ноября, вторник 22:24</span>
             </div>
             <div class="news-main">
@@ -67,20 +66,21 @@
         </div>
         <div class="search">
             <div class="search-header">
-                <a>Видео</a>
-                <a>Картинки</a>
-                <a>Новости</a>
-                <a>Карты</a>
-                <a>Маркет</a>
-                <a>Переводчик</a>
-                <a>Музыка</a>
-                <a>ещё</a>
+                <a href="#">Видео</a>
+                <a href="#">Картинки</a>
+                <a href="#">Новости</a>
+                <a href="#">Карты</a>
+                <a href="#">Маркет</a>
+                <a href="#">Переводчик</a>
+                <a href="#">Музыка</a>
+                <a href="#">ещё</a>
             </div>
             <div class="search-string">
                 <div class="search-main">
-                    <input class="search-main-input" type="text">
+                    <input class="search-main-input">
                     <div class="search-button">Найти</div>
                 </div>
+                <div class="sword"></div>
             </div>
             <div class="search-footer">
                 <div class="sf-one">Найдётся всё. Например, <span>что такое филумения</span></div>
@@ -94,14 +94,6 @@
             <img src="./images/add.png" alt="Advert">
         </div>
         <div class="info-one">
-            <div class="weather">
-                <h3>
-                    <a>Погода</a>
-                    <img alt="weather-img" title="snow" src="./images/snow.png">
-                    <span class="weather-current">−2 °C</span>
-                </h3>
-                <span>Ночь −3,  утро −3</span>
-            </div>
             <div class="visited">
                 <h3>Посещаемое</h3>
                 <p>
@@ -139,6 +131,11 @@
                     —
                     <span class="visited-comment">туры в Таиланд</span>
                 </p>
+            </div>
+            <div class="joke">
+                <h3>Лучшие анекдоты</h3>
+                <span>Раздел: <span class="joke-group">Медицинские</span></span><br>
+                <span>- Вас лечить хорошо или бесплатно</span>
             </div>
         </div>
         <div class="info-two">
@@ -223,9 +220,17 @@
             </div>
         </div>
         <div class="info-three">
+            <div class="weather">
+                <h3>
+                    <a href="#">Погода</a>
+                    <img alt="weather-img" title="snow" src="./images/snow.png">
+                    <span class="weather-current">−2 °C</span>
+                </h3>
+                <span>Ночь −3,  утро −3</span>
+            </div>
             <div class="traffic">
                 <h3>
-                    <a>Пробки</a>
+                    <a href="#">Пробки</a>
                     <img alt="traffic-img" title="color" src="./images/yellow-color.png">
                     <span class="traffic-desc">3 балла</span>
                 </h3>
