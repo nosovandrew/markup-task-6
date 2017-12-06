@@ -17,14 +17,14 @@ a
 .main
 {
     display: grid;
-    grid-template-rows: 60px 220px 110px 108px auto 250px;
-    grid-template-columns: 150px 160px 300px 300px 300px 70px 160px;
-    grid-template-areas: 'a x b b b z c'
-        'a x d d e z c'
-        'a x g g g z c'
-        'a x h h h z c'
-        'a x i l k z c'
-        'a x i l k z c';
+    grid-template-rows: 80px 220px 110px 108px auto 250px;
+    grid-template-columns: 130px auto 150px 270px 270px 270px auto 230px;
+    grid-template-areas: 'b b b b b b b b'
+        'f j x d d e z u'
+        'f j x g g g z u'
+        'f j x h h h z u'
+        'f j x i l k z u'
+        'f j x i l k z u';
 }
 
 .location .location-icon
@@ -39,7 +39,6 @@ a
 .topLeft
 {
     margin: 16px;
-    grid-area: a;
     color: #d3d3d3;
 }
 
@@ -52,12 +51,13 @@ a
 .topMid
 {
     grid-area: b;
+    display: flex;
+    justify-content: space-between;
 }
 
 .topSettings
 {
     padding-top: 16px;
-    grid-area: z;
 }
 
 .topSettings p:hover
@@ -70,7 +70,6 @@ a
 {
     display: flex;
     flex-direction: row-reverse;
-    grid-area: c;
 }
 
 .profile
@@ -239,7 +238,7 @@ a
 
 .yandex-logo
 {
-    margin-top: 291px;
+    margin-top: 233px;
     width: 140px;
     height: auto;
 }
