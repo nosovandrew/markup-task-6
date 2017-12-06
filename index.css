@@ -18,7 +18,7 @@ a
 {
     display: grid;
     grid-template-rows: 80px 220px 110px 108px auto 250px;
-    grid-template-columns: 130px auto 150px 270px 270px 270px auto 230px;
+    grid-template-columns: auto auto 150px 300px 300px 300px auto auto;
     grid-template-areas: 'b b b b b b b b'
         'f j x d d e z u'
         'f j x g g g z u'
@@ -196,7 +196,7 @@ a
 {
     grid-area: e;
     position: relative;
-    padding: 8px 4px 4px 20px;
+    padding: 8px 4px 4px auto;
     margin-top: 6px;
     display: flex;
     flex-direction: column;
